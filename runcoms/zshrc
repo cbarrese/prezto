@@ -4,16 +4,27 @@
 # Authors:
 #   Sorin Ionescu <sorin.ionescu@gmail.com>
 #
-
 # Source Prezto.
 if [[ -s "${ZDOTDIR:-$HOME}/.zprezto/init.zsh" ]]; then
   source "${ZDOTDIR:-$HOME}/.zprezto/init.zsh"
 fi
 
 # Customize to your needs...
+if [ -f $HOME/.aliases ]; then
+  source ~/.aliases
+fi
 
-export EDITOR=vi
+# Setup default cli editor
+export VISUAL=vim
+export EDITOR="$VISUAL"
 
 # Setup direnv
 eval "$(direnv hook $0)"
 
+# Setup default JAVA_HOME
+export JAVA_HOME=`/usr/libexec/java_home -v 1.8`
+export PATH="$HOME/.jenv/bin:$PATH
+eval "$(jenv init -)
+
+# Setup symmetric key log file path
+export SSLKEYLOGFILE=$HOME/.ssl/sslkeylog.log

@@ -36,6 +36,7 @@ zstyle ':prezto:load' pmodule \
   'osx' \
   'rsync' \
   'ruby' \
+  'python' \
   'syntax-highlighting' \
   'terminal' \
   'editor' \
@@ -139,7 +140,7 @@ zstyle ':prezto:module:prompt' theme 'sorin'
 #
 
 # Auto switch the Ruby version on directory change.
-# zstyle ':prezto:module:ruby:chruby' auto-switch 'yes'
+zstyle ':prezto:module:ruby:chruby' auto-switch 'yes'
 
 #
 # Python
@@ -232,3 +233,6 @@ zstyle ':prezto:module:prompt' theme 'sorin'
 # before deleting or overwriting files. Set to 'no' to disable this safer
 # behavior.
 # zstyle ':prezto:module:utility' safe-ops 'yes'
+
+# %v - Node.js version.
+zstyle ':prezto:module:node:info:version' format 'version:%v'
