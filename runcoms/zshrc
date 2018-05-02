@@ -19,7 +19,7 @@ export VISUAL=vim
 export EDITOR="$VISUAL"
 
 # Setup direnv
-eval "$(direnv hook $0)"
+eval "$(direnv hook $SHELL)"
 
 # Setup default JAVA_HOME
 export JAVA_HOME=`/usr/libexec/java_home -v 1.8`
