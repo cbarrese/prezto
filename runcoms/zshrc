@@ -24,7 +24,7 @@ eval "$(direnv hook $SHELL)"
 # Setup default JAVA_HOME
 export JAVA_HOME=`/usr/libexec/java_home -v 1.8`
 export PATH="$HOME/.jenv/bin:$PATH
-eval "$(jenv init -)
+eval "$(jenv init -)"
 
 # Setup symmetric key log file path
 export SSLKEYLOGFILE=$HOME/.ssl/sslkeylog.log
